@@ -31,6 +31,8 @@ Some ages to try to make sure your app works:
 - 2 human years -> 24 dog years
 - 10 human years -> 64 dog years
 
-Your app will work with a dog's name and age in human years, and return a sentence about their age in dog years. Running `node dog-age-calculator-.js Maisie 3` should output: "Your dog, Maisie, is 3 years old, but that's 29 years old in dog years!"
+Your app will work with a dog's name and age in human years, and return a sentence about their age in dog years. 
 
-Similarly, `node dog-age-calculator.js Ralph 4` will output, "Your dog, Ralph, is 4 years old, but that's 34 years old in dog years!"
+Running `node index.js Maisie 3` should output: "Your dog, Maisie, is 3 years old, but that's 29 years old in dog years!"
+
+Similarly, running `node index.js Ralph 4` should output, "Your dog, Ralph, is 4 years old, but that's 34 years old in dog years!"
