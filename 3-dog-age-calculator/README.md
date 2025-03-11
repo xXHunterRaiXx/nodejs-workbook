@@ -1,21 +1,22 @@
 
-### Introduction
+# Activity 3: Dog Age Calculator
+
+## Introduction
 
 In this lab, you will be creating a small Node.js app that can take in input on the command line and give the user the answer they're looking for.
 
-### Goal
+## Goal
 
 When you're done, you'll have a small command-line app that other developers can download and run.
 
-### Resources
+## Resources
 
-Here are two excellent articles quickly summarizing `process.argv`:
+Here is an articles quickly summarizing `process.argv`:
 
-- [Access Command Line Arguments Using process.argv in Node.js](https://www.webmound.com/nodejs-command-line-arguments/)
 - [NodeJS process.argv property explained](https://sebhastian.com/nodejs-process-argv/)
 
 
-#### Dog Age Calculator
+## Dog Age Calculator
 
 It's not _actually_ true that 1 dog year is 7 human years. Nor is the calculation we'll follow _quite_ right—to get a truly accurate picture of a dog's age, you need to take their size into account as well.
 
