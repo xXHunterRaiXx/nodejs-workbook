@@ -1,3 +1,13 @@
+---------------------------------------------------------------
+-- LET'S PRACTICE SQL! 
+
+-- At the top of this file is the SQL code to create 2 tables. 
+-- Your task is to answer the questions at the bottom of this file. 
+
+-- Make sure there are no errors in your SQL code. 
+-- You can run your SQL code in sqlplayground.app or DB Fiddle to check for errors. 
+---------------------------------------------------------------
+
 -- Create a new table for the programming languages. 
 CREATE TABLE programming_languages
 (
