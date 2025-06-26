@@ -1,7 +1,11 @@
-const input = "Javascript Rocks!" 
+const input = "Javascript Rocks!";
 
-// Your Task: 
-// Below, write Javascript code that reverses the input string using a loop. 
-// Log the result using console.log(). 
-// Then run the file using the node command. 
-// If your code is correct, you should see the reversed string in the terminal output.
+// Your Task:
+// 1. Write JavaScript code below that reverses the `input` string using a loop.
+// 2. Store the reversed string in a variable (e.g., `reversed`).
+// 3. Use `console.log()` to print the `reversed` value.
+// 4. Execute the file in your terminal using: `node reverseString.js`
+
+// If your code works, you should see the reversed string displayed in the terminal output.
+// For example, reversing "Javascript Rocks!" should output:
+// "!skcoR tpircSavaJ"
