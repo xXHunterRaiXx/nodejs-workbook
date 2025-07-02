@@ -8,7 +8,7 @@
 // For example, reversing "Javascript Rocks!" should print:
 // "!skcoR tpircSavaJ"
 
-// ------------------------------------------------------
+// -------------------------------------
 
 const inputString = "Javascript Rocks!";
 let reversedString = "";
