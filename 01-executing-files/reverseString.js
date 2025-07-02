@@ -12,6 +12,9 @@
 
 const inputString = "Javascript Rocks!";
 let reversedString = "";
+for (let i = inputString.length - 1; i >= 0; i--) {
+  reversedString += inputString[i];
+}
 
 // Your code here
 
