@@ -8,3 +8,9 @@ Run this file with the node command:
 node dogAgeCalculator.js
 
 */
+let dogName = "Rocket";
+let humanAge = 5;
+
+let oneDogYear = 15;
+let twoDogYear = oneDogYear + 9;
+let threePlusDogYears = twoDogYear + 5;
