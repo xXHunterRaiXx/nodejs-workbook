@@ -9,3 +9,9 @@ REQUIREMENTS:
     - "2024 is a leap year!"
     - "1979 is not a leap year!"
 */
+import { moment } from "moment";
+
+const month = process.argv[2];
+console.log(month);
+
+moment("../node_modules/moment/moment.js", "utf8", (err, data) => {});
