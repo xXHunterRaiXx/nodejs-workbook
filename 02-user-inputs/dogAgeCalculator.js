@@ -22,7 +22,7 @@ let threePlusDogYears = twoDogYear + (humanAge - 2) * 5;
 //four years is 15 + 9 + 5 + 5
 //five years is 15 + 9 + 5 + 5 + 5
 
-if (humanAge > 0)
+if (humanAge < 0)
   console.log(
     `${dogName} is ${humanAge} years old in human years and ${threePlusDogYears} in dog years`
   );

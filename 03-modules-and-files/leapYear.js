@@ -11,8 +11,9 @@ REQUIREMENTS:
 */
 import { moment } from "moment";
 
-const month = process.argv[2];
-console.log(month);
+const year = process.argv[2];
+console.log(year);
 
 moment("./node_modules/moment/moment.js", "utf8", (err, data) => {});
+//leap year is always on every 4 years in feb.
 // year x 4
