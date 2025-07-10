@@ -37,16 +37,16 @@ app.get("/get-user-name/:userName", (req, res) => {
 
 // we will call the callback function to handle the incoming GET request
 
-// app.get("/get-user", (req, res) => {
-//   const myFormData = {
-//     name: "Arianna",
-//     email: "text@gmail.com",
-//   };
-//   // turn our Javascript data into JSON
-//   const myFormDataJSON = JSON.stringify(myFormData);
-//   // send the JSON data back in the response
-//   res.send(myFormDataJSON);
-// });
+app.get("/get-user", (req, res) => {
+  const myFormData = {
+    name: "Arianna",
+    email: "text@gmail.com",
+  };
+  //   // turn our Javascript data into JSON
+  const myFormDataJSON = JSON.stringify(myFormData);
+  //   // send the JSON data back in the response
+  res.send(myFormDataJSON);
+});
 
 // --------------------------------------------//
 //             HELPER FUNCTIONS                //
@@ -63,17 +63,22 @@ async function getAllBooks() {
   // 3. the callback function that you run once you've read the data
 
   // this syntax uses call back function
-  // const booksData = fs.readFile("../data.json", "utf8", (err, data) => {
-  //   return data;
-  // });
-  // return JSON.parse(booksData);
+  const booksData = fs.readFile("../data.json", "utf8", (err, data) => {
+    return data;
+  });
+  return JSON.parse(booksData);
 
   // this syntax uses async /await — more modern approach
   const data = await fs.readFile("../data.json", "utf8");
   return JSON.parse(data);
 }
 
-async function getOneBook(bookIndex) {}
+async function getOneBook(bookIndex) {
+  const data = await fs.readFile("../data.json", "utf8");
+  const parsedData = JSON.parse(data);
+  const parsedBook = parsedData(bookIndex);
+  return parsedBook;
+}
 
 // ----------------------------------//
 //          API ENDPOINTS.           //
