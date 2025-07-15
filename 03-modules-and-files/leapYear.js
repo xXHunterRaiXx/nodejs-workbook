@@ -9,11 +9,19 @@ REQUIREMENTS:
     - "2024 is a leap year!"
     - "1979 is not a leap year!"
 */
-import { moment } from "moment";
+import moment from "moment";
 
 const year = process.argv[2];
 console.log(year);
 
-moment("./node_modules/moment/moment.js", "utf8", (err, data) => {});
+const leapYearData = moment().isLeapYear();
+
+if (leapYearData) {
+  return true;
+  console.log(`${year} is true`);
+} else {
+  console.log(`${year} is false`);
+}
+
 //leap year is always on every 4 years in feb.
 // year x 4
