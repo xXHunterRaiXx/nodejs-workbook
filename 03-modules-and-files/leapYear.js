@@ -14,13 +14,12 @@ import moment from "moment";
 const year = process.argv[2];
 console.log(year);
 
-const leapYearData = moment().isLeapYear();
+const leapYearData = moment([year]).isLeapYear();
 
 if (leapYearData) {
-  return true;
-  console.log(`${year} is true`);
+  console.log(`${year} is a leap year!`);
 } else {
-  console.log(`${year} is false`);
+  console.log(`${year} is not a leap year!`);
 }
 
 //leap year is always on every 4 years in feb.
