@@ -35,6 +35,14 @@ async function getOneRecipe(index) {
   return parsedRecipe;
 }
 
+async function deleteOneRecipe(recipeName) {
+  await db.query("DELETE FROM recipe WHERE name = $1", [recipeName]);
+}
+
+async function updateOneRecipe(recipeData) {
+  await db.query("UPDATE recipe SET name = $1", [recipeData.name]);
+}
+
 // ---------------------------------
 // API Endpoints
 // ---------------------------------
@@ -58,4 +66,16 @@ app.get("/get-one-recipe/:index", async (req, res) => {
 
 // TODO: API Endpoint for handling GET requests to /delete-one-recipe/:index
 
+app.get("/delete-one-recipe/:name", async (req, res) => {
+  const xRecipeName = req.params.name;
+  await deleteOneRecipe(xRecipeName);
+  res.send("The recipe was successfully deleted!");
+});
+
 // TODO: API Endpoint for handling GET requests to /update-one-recipe-name/:index/:newName
+
+app.post("/update-one-recipe-name/:name", async (req, res) => {
+  const updateRecipe = req.params.name;
+  await updateOneRecipe(updateRecipe);
+  res.send("The recipe was successfully updated!");
+});
