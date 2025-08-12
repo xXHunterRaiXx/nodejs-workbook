@@ -35,14 +35,6 @@ async function getOneRecipe(index) {
   return parsedRecipe;
 }
 
-async function deleteOneRecipe(recipeName) {
-  await db.query("DELETE FROM recipe WHERE name = $1", [recipeName]);
-}
-
-async function updateOneRecipe(recipeData) {
-  await db.query("UPDATE recipe SET name = $1", [recipeData.name]);
-}
-
 // ---------------------------------
 // API Endpoints
 // ---------------------------------
@@ -57,25 +49,15 @@ app.get("/get-all-recipes", async (req, res) => {
 // TODO: API Endpoint for handling GET requests to /get-one-recipe/:index
 
 app.get("/get-one-recipe/:index", async (req, res) => {
+  // get request // endpoint is /get-one-recipe/:index
+  //(req, res) request respond
   const recipeIndex = req.params.index;
+  //verible recipeIndex
+  //request
   const recipe = await getOneRecipe(recipeIndex);
+  //verible recipe tells us to wait for getOneRecipe helper function to be called to get the recipeIndex
   res.send(JSON.stringify(recipe));
-
+  //respond and send the recipe to json to a string
   console.log(`The user is trying to get the recipe at index ${recipeIndex}`);
-});
-
-// TODO: API Endpoint for handling GET requests to /delete-one-recipe/:index
-
-app.get("/delete-one-recipe/:name", async (req, res) => {
-  const xRecipeName = req.params.name;
-  await deleteOneRecipe(xRecipeName);
-  res.send("The recipe was successfully deleted!");
-});
-
-// TODO: API Endpoint for handling GET requests to /update-one-recipe-name/:index/:newName
-
-app.post("/update-one-recipe-name/:name", async (req, res) => {
-  const updateRecipe = req.params.name;
-  await updateOneRecipe(updateRecipe);
-  res.send("The recipe was successfully updated!");
+  //console log it
 });
